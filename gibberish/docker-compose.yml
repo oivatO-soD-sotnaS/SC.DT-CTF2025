@@ -1,0 +1,41 @@
+services:
+  gibberish:
+    build:
+      context: ./gogs
+      dockerfile: Dockerfile
+    container_name: gibberish_container
+    ports:
+      - "4444:3000"          # Publicly exposed
+    networks:
+      - public_net           # Public access
+      - private_net          # Internal access to other services
+
+  jibberish:
+    build:
+      context: ./jibberish-app
+      dockerfile: Dockerfile
+    container_name: jibberish_container
+    ports:
+      - "3000:3000"
+    networks:
+      - private_net          # Internal only
+
+  jibber-jabber:
+    build:
+      context: ./graphql-server
+      dockerfile: Dockerfile
+    container_name: jibber-jabber_container
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./graphql-server:/app
+      - /app/node_modules
+    networks:
+      - private_net          # Internal only
+
+networks:
+  public_net:
+    driver: bridge
+  private_net:
+    driver: bridge
+    internal: true           # Blocks external host access
