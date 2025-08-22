@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/otavio/Documents/SC.DT-CTF2025/ctf-01/app/page.tsx"],"sourcesContent":["import { AppSidebar } from \"@/app/(private)/_components/app-sidebar\"\nimport { ChartAreaInteractive } from \"@/app/(private)/_components/chart-area-interactive\"\nimport { DataTable } from \"@/app/(private)/_components/data-table\"\nimport { SectionCards } from \"@/app/(private)/_components/section-cards\"\nimport { SiteHeader } from \"@/app/(private)/_components/site-header\"\nimport {\n  SidebarInset,\n  SidebarProvider,\n} from \"@/components/ui/sidebar\"\n\nimport data from \"./data.json\"\n\nexport default function Page() {\n  return (\n    <ShaderBackground>\n      <Header />\n      <HeroContent />\n      <PulsingCircle />\n    </ShaderBackground>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAYe,SAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;;;;;0BACD,8OAAC;;;;;0BACD,8OAAC;;;;;;;;;;;AAGP","debugId":null}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/otavio/Documents/SC.DT-CTF2025/ctf-01/app/%28private%29/YOU%2527ILL%2520NEVER%2520GUESS/page.tsx"],"sourcesContent":["import React from 'react'\n\nexport default function Page() {\n  return (\n    <div className='relative h-screen w-screen flex flex-col items-center justify-center text-green-300'>\n        <h1 className='font-extrabold text-4xl italic'>YOU WOULD NEVER GUESS</h1>\n        <p>{`FLAG{23e62f99db18318606fca20f90944e83b05fe3fa11f442ca3e450b9480284a8e}`}</p>\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACX,8OAAC;gBAAG,WAAU;0BAAiC;;;;;;0BAC/C,8OAAC;0BAAG,CAAC,sEAAsE,CAAC;;;;;;;;;;;;AAGpF","debugId":null}}]
+}

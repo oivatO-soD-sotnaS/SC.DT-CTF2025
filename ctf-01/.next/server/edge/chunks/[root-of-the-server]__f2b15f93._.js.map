@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\";\nimport { getSessionCookie } from \"better-auth/cookies\";\n \nexport async function middleware(request: NextRequest) {\n\tconst sessionCookie = getSessionCookie(request);\n \n    // THIS IS NOT SECURE!\n    // This is the recommended approach to optimistically redirect users\n    // We recommend handling auth checks in each page/route\n\tif (!sessionCookie) {\n\t\treturn NextResponse.redirect(new URL(\"/\", request.url));\n\t}\n \n\treturn NextResponse.next();\n}\n \nexport const config = {\n\tmatcher: [\"/dashboard\"], // Specify the routes the middleware applies to\n};"],"names":[],"mappings":";;;;;;AAAA;AAAA;AACA;;;AAEO,eAAe,WAAW,OAAoB;IACpD,MAAM,gBAAgB,IAAA,uLAAgB,EAAC;IAEpC,sBAAsB;IACtB,oEAAoE;IACpE,uDAAuD;IAC1D,IAAI,CAAC,eAAe;QACnB,OAAO,gMAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,KAAK,QAAQ,GAAG;IACtD;IAEA,OAAO,gMAAY,CAAC,IAAI;AACzB;AAEO,MAAM,SAAS;IACrB,SAAS;QAAC;KAAa;AACxB"}}]
+}
